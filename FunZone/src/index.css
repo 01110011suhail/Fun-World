@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #ffffff10;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.square:hover {
+  background: #ffffff30;
+  transform: scale(1.05);
+}
+
+/* Click animation */
+.square:active {
+  transform: scale(0.9);
+}
+
+/* X and O colors */
+.square:has(:contains("X")) {
+  color: #ff6b6b;
+}
+
+.square:has(:contains("O")) {
+  color: #4ecdc4;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
