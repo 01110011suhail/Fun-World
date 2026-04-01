@@ -199,7 +199,7 @@ function getBestMove(squares) {
   }
   return move;
 }   
-
+       
 
 function minimax(board, depth, isMaximizing) {
   const winner = calculateWinner(board);
